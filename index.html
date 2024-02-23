@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Filmix - Movie Streaming Website</title>
+    </head>
+    <body class="d-flex flex-column justify-content-start align-items-center">
+        <!--Navigation Bar-->
+         <nav class="navbar d-flex position-fixed" style="width: 100%;z-index: 9 ;">
+            <div class="container-lg align-items-center h-100">
+                <span class="navbar-brand fs-2 text p-0 mx-2 mx-lg-0 navItems" style="font-family: 'Anton',sans-serif;">Film<span class="text-danger">i</span>x</span>
+                <ul class="navbar-nav d-none d-lg-flex flex-row align-items-center">
+                    <li class="nav-item mx-5 ">
+                        <a href="#movieCarousel" class="nav-link text navItems">Home</a>
+                    </li>
+                    <li class="nav-item mx-5 ">
+                        <a href="#recommendedSection" class="nav-link text navItems">Recommended</a>
+                    </li>
+                    <li class="nav-item mx-5 ">
+                        <a href="#moviesSection" class="nav-link text navItems">Movies</a>
+                    </li>
+                    <li class="nav-item mx-5 ">
+                        <a href="#seriesSection" class="nav-link text navItems">TV Series</a>
+                    </li>
+                    <div class="colorToggle rounded-circle d-flex justify-content-center align-items-center d-none d-lg-flex">
+                        <i class="bi bi-moon-stars-fill toggler navItems"></i>
+                    </div>
+                </ul>
+
+                
+
+                <i class="bi bi-list list-icon  fs-1 mx-2 mx-lg-0 d-flex d-lg-none"></i>
+
+                <div class="mobile-nav py-4 justify-content-center align-items-center d-none d-lg-none">
+                    <ul class="navbar-nav d-flex flex-column text-center align-items-center">
+                        <li class="nav-item mx-5">
+                            <a href="#movieCarousel" class="nav-link nav-mb-link">Home</a>
+                        </li>
+                        <hr class="text" style="width: 80%; align-self:center;">
+                        <li class="nav-item mx-5">
+                            <a href="#recommendedSection" class="nav-link nav-mb-link">Recommended</a>
+                        </li>
+                        <hr class="text" style="width: 80%; align-self:center;">
+                        <li class="nav-item mx-5">
+                            <a href="#moviesSection" class="nav-link nav-mb-link">Movies</a>
+                        </li>
+                        <hr class="text" style="width: 80%; align-self:center;">
+                        <li class="nav-item mx-5">
+                            <a href="#seriesSection" class="nav-link nav-mb-link">TV Series</a>
+                        </li>
+                        <hr class="text" style="width: 80%; align-self:center;">
+                        <div class="colorToggle rounded-circle d-flex justify-content-center align-items-center  d-lg-none">
+                            <i class="bi bi-moon-stars-fill toggler navItems mb-toggler"></i>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--Movie Carousel-->
+        <div class="carouselContainer d-flex justify-content-center" style="width: 100%; height: 100vh;">
+            <div class="carousel slide h-100 w-100" data-bs-ride="carousel" id="movieCarousel">
+
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#movieCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+
+                <div class="carousel-inner w-100 h-100">
+
+                    <div class="carousel-item w-100 h-100 active">
+                        <div class="h-100 " style="background-image: url(imgs/GodzillaVsKongPoster.jpg)">
+                            <div class="homeText d-flex flex-column justify-content-center position-absolute" style="left: 15%; bottom: calc(50% - 50px);">
+                                <span class="text-white" style="font-family: 'Bebas Neue', cursive; font-size: 3rem;">GODZILLA VS KONG</span>
+                                <a href="https://www.youtube.com/watch?v=odM92ap8_c0" target="_blank" class="watchBtn text-decoration-none">Watch Trailer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item  w-100 h-100">
+                        <div class="h-100" style="background-image: url(imgs/VenomPoster.jpg)">
+                            <div class="homeText d-flex flex-column justify-content-center position-absolute" style="left: 15%; bottom: calc(50% - 50px);">
+                                <span class="text-white" style="font-family: 'Bebas Neue', cursive; font-size: 3rem;">VENOM 2</span>
+                                <a href="https://www.youtube.com/watch?v=-FmWuCgJmxo" target="_blank" class="watchBtn text-decoration-none">Watch Trailer</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="carousel-item w-100 h-100">
+                        <div class="h-100 " style="background-image: url(imgs/MoonKnightPoster.jpg)">
+                            <div class="homeText d-flex flex-column justify-content-center position-absolute" style="left: 15%; bottom: calc(50% - 50px);">
+                                <span class="text-white" style="font-family: 'Bebas Neue', cursive; font-size: 3rem;">MOON KNIGHT</span>
+                                <a href="https://www.youtube.com/watch?v=x7Krla_UxRg" target="_blank" class="watchBtn text-decoration-none">Watch Trailer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <button class="carousel-control-prev d-none d-md-inline-block" data-bs-target="#movieCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+    
+                <button class="carousel-control-next d-none d-md-inline-block" data-bs-target="#movieCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+
+        <!--Search Bar-->
+        <div class="searchBarContainer my-4 d-flex justify-content-end align-items-center px-4">
+            <div class="searchBar d-flex justify-content-evenly align-items-center rounded">
+                <input class="searchInput outline-0 border-0 ps-3 text" type="text" placeholder="Search">
+                <i class="bi bi-search fs-5 mx-3 text"></i>
+            </div>
+        </div>
+
+        <!--Search Result-->
+        <div class="searchResultSection my-2 d-none" style="width: 95%;">
+            <div class="resultHeading container-fluid  flex-row justify-content-start align-items-center py-1 ps-1 my-2 ps-md-0">
+                <h5 class="fs-5 text m-0" style="font-family: 'Fira Sans',sans-serif;"></h5>
+            </div>
+            <div class="resultContainer container-fluid d-flex flex-row flex-wrap justify-content-evenly justify-content-md-center align-items-start p-0"></div>
+        </div>
+
+        <!--Recommended Section-->
+        <div class="recommendedSection my-2 movieContainer" style="width: 95%;" id="recommendedSection">
+            <div class="heading container-fluid  flex-row justify-content-start align-items-center py-1 ps-1 my-2 ps-md-0">
+                <h5 class="fs-4 text m-0" style="font-family: 'Fira Sans',sans-serif;">Recommended For You</h5>
+            </div>
+            <div class="container-fluid d-flex flex-row flex-wrap justify-content-evenly justify-content-md-between align-items-start p-0">
+                
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/21/2d/212d2d95b9d515504a4de227d49a769f/212d2d95b9d515504a4de227d49a769f.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon  "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; font-weight:600;">The Batman</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family:'PT Sans', sans-serif; font-size: 13px; color: #919191;">2022 | 2h 56m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/f1/85/f18532c67d948045cf63f34702c2984b/f18532c67d948045cf63f34702c2984b.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">tick, tick...BOOM!</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2021 | 2h</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/15/1b/151b961f5343bebb7f434f3060079d97/151b961f5343bebb7f434f3060079d97.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Black Adam</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2022 | 2h 5m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/8c/76/8c76f7ba1f8d85c3c260b7347e1e64cc/8c76f7ba1f8d85c3c260b7347e1e64cc.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Top Gun: Maverick</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2022 | 2h 10m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/28/70/2870c14e5c015c1e5479332812e2c488/2870c14e5c015c1e5479332812e2c488.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Harry Potter and the Philosopher's Stone</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2001 | 2h 32m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/63/f7/63f76d65bfab9c7c537ac12b907e7c94/63f76d65bfab9c7c537ac12b907e7c94.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Don't Look Up</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2021 | 2h 18m</span>
+                </div>
+                          
+            </div>
+        </div>
+
+        <!--Movies Section-->
+        <div class="moviesSection my-2 movieContainer" style="width: 95%;" id="moviesSection">
+            <div class="heading container-fluid flex-row justify-content-start align-items-center my-2 py-1 ps-1 ps-md-0">
+                <h5 class="fs-4 text m-0" style="font-family: 'Fira Sans',sans-serif;">Movies</h5>
+            </div>
+            <div class="container-fluid d-flex flex-row flex-wrap justify-content-evenly justify-content-md-between align-items-start p-0">
+                
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/e0/03/e00386d0132726d1fe75041469772420/e00386d0132726d1fe75041469772420.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; font-weight:600;">Fantastic Beasts: The Crimes of Grindelwald</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family:'PT Sans', sans-serif; font-size: 13px; color: #919191;">2018 | 2h 14m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/69/da/69daeeaabc72389010331464e8cda51e/69daeeaabc72389010331464e8cda51e.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">The Conjuring: The Devil Made Me Do It</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2021 | 1h 52m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/ec/fc/ecfc2373e3b3703a44f7cb4b7ee404c4/ecfc2373e3b3703a44f7cb4b7ee404c4.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Batman v Superman: Dawn of Justice</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2016 | 2h 31m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/2d/e8/2de8f08bd22b589db9432918bfd6bf6e/2de8f08bd22b589db9432918bfd6bf6e.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Godzilla vs Kong</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2021 | 1h 53m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/11/e9/11e99ac5f2e95ae79a388f06bd8c8255/11e99ac5f2e95ae79a388f06bd8c8255.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">The Amazing Spider-Man</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2012 | 2h 16m</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/bd/d3/bdd34eb241bf3d74098aaf29529a2f02/bdd34eb241bf3d74098aaf29529a2f02.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Avengers: Infinity War</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2022 | 2h 29m</span>
+                </div>
+                          
+            </div>
+        </div>
+
+        <!--Series Section-->
+        <div class="seriesSection my-2 movieContainer" style="width: 95%;" id="seriesSection">
+            <div class="heading container-fluid flex-row justify-content-start align-items-center my-2 py-1 ps-1 ps-md-0">
+                <h5 class="fs-4 text m-0" style="font-family: 'Fira Sans',sans-serif;">TV Series</h5>
+            </div>
+            <div class="container-fluid d-flex flex-row flex-wrap justify-content-evenly justify-content-md-between align-items-start p-0">
+                
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/52/b6/52b664f62bc556f593ce941d9b92276c/52b664f62bc556f593ce941d9b92276c.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px; font-weight:600;">Youth of May</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family:'PT Sans', sans-serif; font-size: 13px; color: #919191;">2021 | EPS-12</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/dd/0b/dd0b5277e8ff28e5da8084006cb6d83a/dd0b5277e8ff28e5da8084006cb6d83a.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Soundtrack #1</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2022 | EPS-4</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/92/d1/92d1960daf224523b8cd4bffb37caf45/92d1960daf224523b8cd4bffb37caf45.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Hometown Cha-Cha-Cha</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2021 | EPS-16</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/ad/28/ad2843ad0846715a789e1a1cd7bccc32/ad2843ad0846715a789e1a1cd7bccc32.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Daredevil</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2015 | EPS-13</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/5f/9b/5f9b761b5295166059d7fff9a7880432/5f9b761b5295166059d7fff9a7880432.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Moon Knight</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2022 | EPS-6</span>
+                </div>
+                <div class="movie-card card border-0 bg-transparent rounded-0 mx-1 mx-md-0">
+                    <img src="https://img.moviesjoy.to/resize/188x288/18/35/1835a149bda1ba3113dc72155123dc7f/1835a149bda1ba3113dc72155123dc7f.jpg" alt="" class="card-img-top rounded-0">
+                    <i class="bi bi-play-fill play-icon "></i>
+                    <span class="card-title text my-0 mt-1" style="font-family: 'Source Sans Pro', sans-serif; font-size: 14px;">Once Upon a Small Town</span>
+                    <span class="card-subtitle mb-2 fw-light" style="font-family: 'PT Sans', sans-serif; font-size: 13px; color: #919191;">2022 | EPS-12</span>
+                </div>
+                          
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script src="src/main.js"></script>
+        <script src="src/index.js"></script>
+    </body>
+</html>
+
+
+     

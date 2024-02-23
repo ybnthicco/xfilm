@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Fira+Sans:wght@500&family=PT+Sans&family=Source+Sans+Pro:wght@600&display=swap');
+
+*{
+    margin: 0 0;
+    padding: 0 0;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+    -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 20px;
+    background-color: #303030;
+    transition: background-color 150ms ease-in-out 0s;
+}
+
+/* Heading*/
+
+.navbar{
+    top: 0px;
+    transition: background-color 150ms ease-in-out 0s;
+}
+
+.text{
+    transition:  background-color 150ms ease-in-out 0s;
+}
+
+.nav-link{
+    color: white;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.nav-link:hover{
+    color: rgba(255,255,255,0.8);
+}
+
+.colorToggle{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(210,210,210,0.35);
+    position: absolute;
+    right: 50px;
+}
+
+.toggler{
+    color: white;
+    transition: color 150ms ease-in-out 0s;
+}
+
+.mobile-nav{
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    transition: background-color 150ms ease-in-out 0s;
+}
+
+/* Movie Information Section*/
+
+.container{
+    margin-top: 62.5px;
+}
+
+.moviePoster{
+    width: 65%;
+}
+
+.movieInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movieName{
+    width: 95%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rating{
+    color: #f3ce13;
+    font-family: "Fira Sans", sans-serif;
+}
+
+.movieName, .movieDescription{
+    width: 95%;
+    overflow: hidden;
+    white-space: wrap;
+}
+
+.watchBtn{
+    width: 125px;
+    height: 35px;
+    outline: 0;
+    color:rgba(35,35,35);
+}
+
+.trailerBtn{
+    width: 85px;
+    height: 35px;
+    background-color: rgba(255,255,255,0.3);
+    outline: 0;
+}
+
+
+.subText{
+    color: #cccccc;
+}
+
+@media only screen and (max-width: 1000px){
+    .mobile-nav{
+        width: 50%;
+    }
+
+    .colorToggle{
+        position: static;
+        right: 0px;
+    }
+
+    .moviePoster{
+        width: 35%;
+    }
+
+}
+
+@media only screen and (max-width: 420px){
+    .mobile-nav{
+        width: 90%;
+        top: 75px;
+        right: 5%;
+        left: 5%;
+    }
+
+    .moviePoster{
+        width: 60%;
+    }
+}
